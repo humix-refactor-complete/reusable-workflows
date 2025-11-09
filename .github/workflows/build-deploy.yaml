@@ -1,7 +1,7 @@
 name: Reusable Workflow de Build e Deploy nodeJS
 
 on:
-  workflow_call
+  workflow_call:
 
 jobs:
   build:
