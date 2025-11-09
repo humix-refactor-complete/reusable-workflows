@@ -6,13 +6,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Instalar pnpm
-        run: npm install -g pnpm
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -20,5 +17,12 @@ jobs:
           node-version: 22
           cache: 'pnpm'
 
-      - name: Instalando dependêncuas
+      - name: Instalar pnpm
+        run: npm install -g pnpm
+
+      - name: Instalar dependências
         run: pnpm install
+
+      - name: Build do projeto
+        run: pnpm build
+
